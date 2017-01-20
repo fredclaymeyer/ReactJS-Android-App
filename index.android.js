@@ -13,7 +13,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-export default class AwesomeProject extends Component {
+export default class DeepBreaths extends Component {
   constructor() {
     super();
     this.state = {
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#22aa55',
   },
   count: {
-    fontSize: 50,
+    fontSize: 100,
   },
   message: {
     fontSize: 20,
@@ -146,9 +146,18 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   button: {
-    backgroundColor: '#eee',
-    padding: 10,
-  }
+    
+    backgroundColor: 'rgba(255,255,255,.5)',
+    paddingTop: 15,
+    paddingBottom: 15,
+    paddingRight: 30,
+    paddingLeft: 30,
+    borderRadius: 15,
+  },
+  buttontext: {
+    fontSize: 50,
+    fontWeight: '700',
+  },
 });
 
 class Count extends Component {
@@ -190,11 +199,11 @@ class Button extends Component {
       <TouchableOpacity style={styles.button} onPress={this.props.clickHandler
       }>
         <View>
-          <Text onPress={this.props.clickHandler} >Ready</Text>
+          <Text style={styles.buttontext} onPress={this.props.clickHandler} >Ready</Text>
         </View>
       </TouchableOpacity>
     );
   }
 }
 
-AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
+AppRegistry.registerComponent('DeepBreaths', () => DeepBreaths);
